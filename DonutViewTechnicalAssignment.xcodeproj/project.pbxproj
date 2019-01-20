@@ -8,24 +8,67 @@
 
 /* Begin PBXBuildFile section */
 		6E3F253D21F3EEA2001F283C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F253C21F3EEA2001F283C /* AppDelegate.swift */; };
-		6E3F253F21F3EEA2001F283C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F253E21F3EEA2001F283C /* ViewController.swift */; };
-		6E3F254221F3EEA2001F283C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3F254021F3EEA2001F283C /* Main.storyboard */; };
+		6E3F254221F3EEA2001F283C /* DonutStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3F254021F3EEA2001F283C /* DonutStoryboard.storyboard */; };
 		6E3F254421F3EEA3001F283C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3F254321F3EEA3001F283C /* Assets.xcassets */; };
 		6E3F254721F3EEA3001F283C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3F254521F3EEA3001F283C /* LaunchScreen.storyboard */; };
+		6E3F255421F3F117001F283C /* DonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F255321F3F117001F283C /* DonutView.swift */; };
+		6E3F255821F3F536001F283C /* DonutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F255721F3F536001F283C /* DonutViewController.swift */; };
+		6E3F255B21F3F74C001F283C /* DonutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F255A21F3F74C001F283C /* DonutConfigurator.swift */; };
+		6E3F255D21F40B7B001F283C /* DonutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3F255C21F40B7B001F283C /* DonutView.xib */; };
+		6E3F256021F40E4C001F283C /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F255F21F40E4C001F283C /* NibLoadingView.swift */; };
+		6E3F256221F40F8F001F283C /* DonutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F256121F40F8F001F283C /* DonutPresenter.swift */; };
+		6E3F256421F40FB9001F283C /* DonutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F256321F40FB9001F283C /* DonutInteractor.swift */; };
+		6E3F256821F42B32001F283C /* CreditScoresWebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F256721F42B32001F283C /* CreditScoresWebServiceHandler.swift */; };
+		6E3F257A21F4423B001F283C /* DonutInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F257921F4423B001F283C /* DonutInteractorTests.swift */; };
+		6E3F257B21F442AF001F283C /* DonutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F256321F40FB9001F283C /* DonutInteractor.swift */; };
+		6E3F257C21F442EF001F283C /* CreditScoresWebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F256721F42B32001F283C /* CreditScoresWebServiceHandler.swift */; };
+		6E3F257F21F448BF001F283C /* DonutPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F257E21F448BF001F283C /* DonutPresenterTests.swift */; };
+		6E3F258021F448ED001F283C /* DonutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F255721F3F536001F283C /* DonutViewController.swift */; };
+		6E3F258121F449D4001F283C /* DonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F255321F3F117001F283C /* DonutView.swift */; };
+		6E3F258221F449F8001F283C /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F255F21F40E4C001F283C /* NibLoadingView.swift */; };
+		6E3F258321F44B3F001F283C /* DonutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F256121F40F8F001F283C /* DonutPresenter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E3F257221F441DC001F283C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3F253121F3EEA2001F283C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E3F253821F3EEA2001F283C;
+			remoteInfo = DonutViewTechnicalAssignment;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6E3F253921F3EEA2001F283C /* DonutViewTechnicalAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonutViewTechnicalAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3F253C21F3EEA2001F283C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E3F253E21F3EEA2001F283C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6E3F254121F3EEA2001F283C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E3F254121F3EEA2001F283C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DonutStoryboard.storyboard; sourceTree = "<group>"; };
 		6E3F254321F3EEA3001F283C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E3F254621F3EEA3001F283C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E3F254821F3EEA3001F283C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E3F255321F3F117001F283C /* DonutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutView.swift; sourceTree = "<group>"; };
+		6E3F255721F3F536001F283C /* DonutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutViewController.swift; sourceTree = "<group>"; };
+		6E3F255A21F3F74C001F283C /* DonutConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutConfigurator.swift; sourceTree = "<group>"; };
+		6E3F255C21F40B7B001F283C /* DonutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonutView.xib; sourceTree = "<group>"; };
+		6E3F255F21F40E4C001F283C /* NibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
+		6E3F256121F40F8F001F283C /* DonutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutPresenter.swift; sourceTree = "<group>"; };
+		6E3F256321F40FB9001F283C /* DonutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutInteractor.swift; sourceTree = "<group>"; };
+		6E3F256721F42B32001F283C /* CreditScoresWebServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoresWebServiceHandler.swift; sourceTree = "<group>"; };
+		6E3F256D21F441DC001F283C /* DonutViewTechnicalAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonutViewTechnicalAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3F257121F441DC001F283C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E3F257921F4423B001F283C /* DonutInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutInteractorTests.swift; sourceTree = "<group>"; };
+		6E3F257E21F448BF001F283C /* DonutPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6E3F253621F3EEA2001F283C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3F256A21F441DC001F283C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				6E3F253B21F3EEA2001F283C /* DonutViewTechnicalAssignment */,
+				6E3F256E21F441DC001F283C /* DonutViewTechnicalAssignmentTests */,
 				6E3F253A21F3EEA2001F283C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				6E3F253921F3EEA2001F283C /* DonutViewTechnicalAssignment.app */,
+				6E3F256D21F441DC001F283C /* DonutViewTechnicalAssignmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +99,119 @@
 		6E3F253B21F3EEA2001F283C /* DonutViewTechnicalAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				6E3F254E21F3F003001F283C /* DonutScreen */,
+				6E3F255E21F40E1D001F283C /* CustomViews */,
 				6E3F253C21F3EEA2001F283C /* AppDelegate.swift */,
-				6E3F253E21F3EEA2001F283C /* ViewController.swift */,
-				6E3F254021F3EEA2001F283C /* Main.storyboard */,
 				6E3F254321F3EEA3001F283C /* Assets.xcassets */,
 				6E3F254521F3EEA3001F283C /* LaunchScreen.storyboard */,
 				6E3F254821F3EEA3001F283C /* Info.plist */,
 			);
 			path = DonutViewTechnicalAssignment;
+			sourceTree = "<group>";
+		};
+		6E3F254E21F3F003001F283C /* DonutScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F256621F42AFA001F283C /* WebServiceHandler */,
+				6E3F255921F3F62C001F283C /* Storyboard */,
+				6E3F255221F3F056001F283C /* Configurator */,
+				6E3F254F21F3F01A001F283C /* Interactor */,
+				6E3F255021F3F026001F283C /* Presenter */,
+				6E3F255121F3F02D001F283C /* View */,
+			);
+			path = DonutScreen;
+			sourceTree = "<group>";
+		};
+		6E3F254F21F3F01A001F283C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F256321F40FB9001F283C /* DonutInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6E3F255021F3F026001F283C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F256121F40F8F001F283C /* DonutPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6E3F255121F3F02D001F283C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F255721F3F536001F283C /* DonutViewController.swift */,
+				6E3F255321F3F117001F283C /* DonutView.swift */,
+				6E3F255C21F40B7B001F283C /* DonutView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E3F255221F3F056001F283C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F255A21F3F74C001F283C /* DonutConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		6E3F255921F3F62C001F283C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F254021F3EEA2001F283C /* DonutStoryboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6E3F255E21F40E1D001F283C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F255F21F40E4C001F283C /* NibLoadingView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		6E3F256621F42AFA001F283C /* WebServiceHandler */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F256721F42B32001F283C /* CreditScoresWebServiceHandler.swift */,
+			);
+			path = WebServiceHandler;
+			sourceTree = "<group>";
+		};
+		6E3F256E21F441DC001F283C /* DonutViewTechnicalAssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F257721F44211001F283C /* DonutScreen */,
+				6E3F257121F441DC001F283C /* Info.plist */,
+			);
+			path = DonutViewTechnicalAssignmentTests;
+			sourceTree = "<group>";
+		};
+		6E3F257721F44211001F283C /* DonutScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F257821F4421A001F283C /* Interactor */,
+				6E3F257D21F44895001F283C /* Presenter */,
+			);
+			path = DonutScreen;
+			sourceTree = "<group>";
+		};
+		6E3F257821F4421A001F283C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F257921F4423B001F283C /* DonutInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6E3F257D21F44895001F283C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F257E21F448BF001F283C /* DonutPresenterTests.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +234,24 @@
 			productReference = 6E3F253921F3EEA2001F283C /* DonutViewTechnicalAssignment.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6E3F256C21F441DC001F283C /* DonutViewTechnicalAssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E3F257421F441DC001F283C /* Build configuration list for PBXNativeTarget "DonutViewTechnicalAssignmentTests" */;
+			buildPhases = (
+				6E3F256921F441DC001F283C /* Sources */,
+				6E3F256A21F441DC001F283C /* Frameworks */,
+				6E3F256B21F441DC001F283C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E3F257321F441DC001F283C /* PBXTargetDependency */,
+			);
+			name = DonutViewTechnicalAssignmentTests;
+			productName = DonutViewTechnicalAssignmentTests;
+			productReference = 6E3F256D21F441DC001F283C /* DonutViewTechnicalAssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +264,10 @@
 				TargetAttributes = {
 					6E3F253821F3EEA2001F283C = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					6E3F256C21F441DC001F283C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6E3F253821F3EEA2001F283C;
 					};
 				};
 			};
@@ -113,6 +285,7 @@
 			projectRoot = "";
 			targets = (
 				6E3F253821F3EEA2001F283C /* DonutViewTechnicalAssignment */,
+				6E3F256C21F441DC001F283C /* DonutViewTechnicalAssignmentTests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,7 +297,15 @@
 			files = (
 				6E3F254721F3EEA3001F283C /* LaunchScreen.storyboard in Resources */,
 				6E3F254421F3EEA3001F283C /* Assets.xcassets in Resources */,
-				6E3F254221F3EEA2001F283C /* Main.storyboard in Resources */,
+				6E3F254221F3EEA2001F283C /* DonutStoryboard.storyboard in Resources */,
+				6E3F255D21F40B7B001F283C /* DonutView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3F256B21F441DC001F283C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,20 +316,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E3F253F21F3EEA2001F283C /* ViewController.swift in Sources */,
+				6E3F256421F40FB9001F283C /* DonutInteractor.swift in Sources */,
+				6E3F255821F3F536001F283C /* DonutViewController.swift in Sources */,
 				6E3F253D21F3EEA2001F283C /* AppDelegate.swift in Sources */,
+				6E3F255421F3F117001F283C /* DonutView.swift in Sources */,
+				6E3F256021F40E4C001F283C /* NibLoadingView.swift in Sources */,
+				6E3F256821F42B32001F283C /* CreditScoresWebServiceHandler.swift in Sources */,
+				6E3F255B21F3F74C001F283C /* DonutConfigurator.swift in Sources */,
+				6E3F256221F40F8F001F283C /* DonutPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3F256921F441DC001F283C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E3F257C21F442EF001F283C /* CreditScoresWebServiceHandler.swift in Sources */,
+				6E3F258321F44B3F001F283C /* DonutPresenter.swift in Sources */,
+				6E3F257F21F448BF001F283C /* DonutPresenterTests.swift in Sources */,
+				6E3F257A21F4423B001F283C /* DonutInteractorTests.swift in Sources */,
+				6E3F258221F449F8001F283C /* NibLoadingView.swift in Sources */,
+				6E3F257B21F442AF001F283C /* DonutInteractor.swift in Sources */,
+				6E3F258021F448ED001F283C /* DonutViewController.swift in Sources */,
+				6E3F258121F449D4001F283C /* DonutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6E3F257321F441DC001F283C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E3F253821F3EEA2001F283C /* DonutViewTechnicalAssignment */;
+			targetProxy = 6E3F257221F441DC001F283C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		6E3F254021F3EEA2001F283C /* Main.storyboard */ = {
+		6E3F254021F3EEA2001F283C /* DonutStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6E3F254121F3EEA2001F283C /* Base */,
 			);
-			name = Main.storyboard;
+			name = DonutStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		6E3F254521F3EEA3001F283C /* LaunchScreen.storyboard */ = {
@@ -213,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -312,6 +522,46 @@
 			};
 			name = Release;
 		};
+		6E3F257521F441DC001F283C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DonutViewTechnicalAssignmentTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ClearScore.DonutViewTechnicalAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DonutViewTechnicalAssignment.app/DonutViewTechnicalAssignment";
+			};
+			name = Debug;
+		};
+		6E3F257621F441DC001F283C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DonutViewTechnicalAssignmentTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ClearScore.DonutViewTechnicalAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DonutViewTechnicalAssignment.app/DonutViewTechnicalAssignment";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +579,15 @@
 			buildConfigurations = (
 				6E3F254C21F3EEA3001F283C /* Debug */,
 				6E3F254D21F3EEA3001F283C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E3F257421F441DC001F283C /* Build configuration list for PBXNativeTarget "DonutViewTechnicalAssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E3F257521F441DC001F283C /* Debug */,
+				6E3F257621F441DC001F283C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

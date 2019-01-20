@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonutView" customModule="DonutViewTechnicalAssignment" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicatorView" destination="uoH-u8-WCb" id="Wux-MA-kPW"/>
+                <outlet property="currentScoreLabel" destination="2dd-c0-AP6" id="xkm-94-V3a"/>
+                <outlet property="outOfMaxScoreLabel" destination="44C-SM-CSf" id="kVo-gY-fUy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-zU-LSc">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credit score is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdI-p4-aHV">
+                    <rect key="frame" x="50" y="59" width="150.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="327" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dd-c0-AP6">
+                    <rect key="frame" x="64.5" y="80" width="121" height="90"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="75"/>
+                    <color key="textColor" red="0.98431372549999996" green="0.84997723780000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of 700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44C-SM-CSf">
+                    <rect key="frame" x="84.5" y="171.5" width="81" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-u8-WCb">
+                    <rect key="frame" x="80" y="80" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uoH-u8-WCb" secondAttribute="height" id="K3x-Ne-Z32"/>
+                    </constraints>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uoH-u8-WCb" firstAttribute="centerX" secondItem="2dd-c0-AP6" secondAttribute="centerX" id="0zq-Aa-NK9"/>
+                <constraint firstItem="2dd-c0-AP6" firstAttribute="centerY" secondItem="sEa-Th-wWT" secondAttribute="centerY" id="Atj-CJ-BGO"/>
+                <constraint firstItem="BdI-p4-aHV" firstAttribute="centerX" secondItem="sEa-Th-wWT" secondAttribute="centerX" id="BAI-Aj-mvA"/>
+                <constraint firstItem="uoH-u8-WCb" firstAttribute="bottom" secondItem="2dd-c0-AP6" secondAttribute="bottom" id="K6J-31-BRH"/>
+                <constraint firstItem="2dd-c0-AP6" firstAttribute="firstBaseline" secondItem="BdI-p4-aHV" secondAttribute="baseline" constant="72" symbolType="layoutAnchor" id="XEJ-rf-1Ts"/>
+                <constraint firstItem="44C-SM-CSf" firstAttribute="centerX" secondItem="sEa-Th-wWT" secondAttribute="centerX" id="YLf-Mz-9Sd"/>
+                <constraint firstItem="uoH-u8-WCb" firstAttribute="top" secondItem="2dd-c0-AP6" secondAttribute="top" id="gM3-Sn-vhY"/>
+                <constraint firstItem="2dd-c0-AP6" firstAttribute="centerX" secondItem="sEa-Th-wWT" secondAttribute="centerX" id="jfn-co-jiA"/>
+                <constraint firstItem="44C-SM-CSf" firstAttribute="firstBaseline" secondItem="2dd-c0-AP6" secondAttribute="baseline" constant="36" symbolType="layoutAnchor" id="vb5-35-qZt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="sEa-Th-wWT"/>
+            <point key="canvasLocation" x="54.399999999999999" y="-35.982008995502248"/>
+        </view>
+    </objects>
+</document>
