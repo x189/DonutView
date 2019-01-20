@@ -9,25 +9,80 @@
 import XCTest
 
 class DonutPresenterTests: XCTestCase {
+    var mockInteractor: MockInteractor!
+    var mockView: MockView!
+    
+    var presenter: DonutPresenter!
+    
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        
+        mockInteractor = MockInteractor()
+        mockView = MockView()
+        
+        presenter = DonutPresenter(view: mockView)
+        presenter.interactor = mockInteractor
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testHideLoadingAndUpdateScoresGetCalledAfterScoresRetrievalSuccess() {
+        presenter.scoresRetrievalSucceededWith(currentScore: 100, maxScore: 1000)
+        
+        wait(for: [mockView.hideLoadingIndicatorCalledExpectation, mockView.updateScoresCalledExpectation], timeout: 0.1)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testHideLoadingAndShowAlertGetCalledAfterScoresRetrievalFailure() {
+        presenter.scoresRetrievalFailedWith(error: MockError())
+        
+        wait(for: [mockView.hideLoadingIndicatorCalledExpectation, mockView.showAlertCalledExpectation], timeout: 0.1)
     }
+    
+    func testLoadScoresGetsCalledAfterViewIsReady() {
+        presenter.viewIsReady()
+        
+        wait(for: [mockInteractor.getScoresCalledExpectation], timeout: 0.1)
+    }
+    
+    func testLoadScresGetsCalledAfterRetryIsTapped() {
+        presenter.retryTapped()
+        
+        wait(for: [mockInteractor.getScoresCalledExpectation], timeout: 0.1)
+    }
+}
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+extension DonutPresenterTests {
+    class MockInteractor: DonutInteractorInput {
+        var getScoresCalledExpectation = XCTestExpectation()
+        
+        func getScores() {
+            getScoresCalledExpectation.fulfill()
         }
     }
-
+    
+    class MockView: DonutViewInput {
+        var showLoadingIndicatorCalledExpectation = XCTestExpectation()
+        var hideLoadingIndicatorCalledExpectation = XCTestExpectation()
+        var showAlertCalledExpectation = XCTestExpectation()
+        var updateScoresCalledExpectation = XCTestExpectation()
+        
+        func showLoadingIndicator() {
+            showLoadingIndicatorCalledExpectation.fulfill()
+        }
+        
+        func hideLoadingIndicator() {
+            hideLoadingIndicatorCalledExpectation.fulfill()
+        }
+        
+        func showAlertWith(message: String) {
+            showAlertCalledExpectation.fulfill()
+        }
+        
+        func updateScoresWith(currentScore: String, maxScore: String) {
+            updateScoresCalledExpectation.fulfill()
+        }
+    }
+    
+    struct MockError: Error {
+        
+    }
 }

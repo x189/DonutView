@@ -9,25 +9,67 @@
 import XCTest
 
 class DonutInteractorTests: XCTestCase {
+    var mockOutput: MockOutput!
+    var mockHandler: MockHandler!
+    
+    var interactor: DonutInteractor!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        
+        mockOutput = MockOutput()
+        mockHandler = MockHandler()
+        
+        interactor = DonutInteractor(output: mockOutput, scoresWebServiceHandler: mockHandler)
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testOutputGetsInformedAboutScoresRetrievalSuccess() {
+        interactor.getScores()
+                
+        wait(for: [mockOutput.scoresRetrievalSucceededCalledExpectation], timeout: 0.1)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testOutputGetsInformedAboutScoresRetrievalFailure() {
+        interactor = DonutInteractor(output: mockOutput, scoresWebServiceHandler: MockHandler(shouldFail: true))
+        
+        interactor.getScores()
+        
+        wait(for: [mockOutput.scoresRetrievalFailedCalledExpectation], timeout: 0.1)
     }
+}
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+extension DonutInteractorTests {
+    class MockOutput: DonutInteractorOutput {
+        var scoresRetrievalSucceededCalledExpectation = XCTestExpectation()
+        var scoresRetrievalFailedCalledExpectation = XCTestExpectation()
+        
+        func scoresRetrievalSucceededWith(currentScore: Double, maxScore: Double) {
+            scoresRetrievalSucceededCalledExpectation.fulfill()
+        }
+        
+        func scoresRetrievalFailedWith(error: Error) {
+            scoresRetrievalFailedCalledExpectation.fulfill()
+        }
+        
+    }
+    
+    struct MockError: Error {
+        
+    }
+    
+    class MockHandler: CreditScoresWebServiceHandler {
+        private let shouldFail: Bool
+        
+        override func getCreditScores(completionHandler: @escaping ((currentScore: Double, maxScore: Double)?, Error?) -> Void) {
+            if shouldFail {
+                completionHandler(nil, MockError())
+            } else {
+                completionHandler((0, 0), nil)
+            }
+        }
+        
+        init(shouldFail: Bool = false) {
+            self.shouldFail = shouldFail
         }
     }
-
 }
